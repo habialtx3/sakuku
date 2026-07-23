@@ -71,11 +71,11 @@
         </div>
 
         <!-- Category Selector -->
-        <div class="mb-6">
+        <div class="mb-6 items-center">
           <label class="text-label-md font-label-md text-on-surface-variant uppercase mb-3 block px-1">
             Kategori
           </label>
-          <div class="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
+          <div class="flex gap-3 overflow-x-auto pb-2 custom-scrollbar items-center justify-center">
             <button
               v-for="category in categories"
               :key="category.id"

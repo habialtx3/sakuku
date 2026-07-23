@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="id" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      try {
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-fixed": "#ffe167",
+                "on-surface": "#0b1c30",
+                "on-surface-variant": "#444938",
+                primary: "#4a6500",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "on-background": "#0b1c30",
+                "on-error-container": "#93000a",
+                "inverse-surface": "#213145",
+                "on-primary-fixed-variant": "#384e00",
+                "secondary-container": "#c3ef56",
+                "secondary-fixed": "#c6f259",
+                "on-tertiary-fixed-variant": "#544600",
+                "on-primary-container": "#fbffe6",
+                "tertiary-container": "#c7aa16",
+                error: "#ba1a1a",
+                "on-tertiary-fixed": "#221b00",
+                "on-error": "#ffffff",
+                outline: "#757967",
+                "primary-fixed": "#c9f074",
+                "on-secondary-fixed-variant": "#394d00",
+                secondary: "#4d6700",
+                "surface-tint": "#4c6700",
+                "on-primary": "#ffffff",
+                "surface-bright": "#f8f9ff",
+                "surface-container-high": "#dce9ff",
+                "primary-fixed-dim": "#aed45c",
+                "error-container": "#ffdad6",
+                "surface-container-highest": "#d3e4fe",
+                "on-secondary-fixed": "#151f00",
+                "outline-variant": "#c5c9b4",
+                "on-tertiary-container": "#4c3f00",
+                background: "#f8f9ff",
+                "surface-variant": "#d3e4fe",
+                "secondary-fixed-dim": "#abd53f",
+                "inverse-primary": "#aed45c",
+                "primary-container": "#5f7f08",
+                "on-secondary-container": "#516b00",
+                "tertiary-fixed-dim": "#e4c536",
+                "surface-container": "#e5eeff",
+                "surface-dim": "#cbdbf5",
+                tertiary: "#6f5d00",
+                "on-primary-fixed": "#141f00",
+                "surface-container-lowest": "#ffffff",
+                "inverse-on-surface": "#eaf1ff",
+                surface: "#f8f9ff",
+                "surface-container-low": "#eff4ff",
+              },
+              borderRadius: {
+                DEFAULT: "0.25rem",
+                lg: "0.5rem",
+                xl: "0.75rem",
+                full: "9999px",
+              },
+              spacing: {
+                "touch-target-min": "48px",
+                "stack-lg": "24px",
+                "stack-md": "16px",
+                gutter: "16px",
+                "container-padding": "20px",
+                "stack-sm": "8px",
+              },
+              fontFamily: {
+                "body-lg": ["Inter"],
+                "headline-lg": ["Inter"],
+                "display-numeric": ["Inter"],
+                "headline-lg-mobile": ["Inter"],
+                "headline-md": ["Inter"],
+                "label-md": ["Inter"],
+                "body-md": ["Inter"],
+              },
+              fontSize: {
+                "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                "headline-lg": [
+                  "24px",
+                  { lineHeight: "32px", fontWeight: "700" },
+                ],
+                "display-numeric": [
+                  "40px",
+                  {
+                    lineHeight: "48px",
+                    letterSpacing: "-0.02em",
+                    fontWeight: "700",
+                  },
+                ],
+                "headline-lg-mobile": [
+                  "22px",
+                  { lineHeight: "28px", fontWeight: "700" },
+                ],
+                "headline-md": [
+                  "20px",
+                  { lineHeight: "28px", fontWeight: "600" },
+                ],
+                "label-md": [
+                  "12px",
+                  {
+                    lineHeight: "16px",
+                    letterSpacing: "0.05em",
+                    fontWeight: "600",
+                  },
+                ],
+                "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              },
+            },
+          },
+        };
+      } catch (_e) {}
+    </script>
+  </head>
+  <body class="bg-surface-container-low min-h-screen overflow-hidden">
+    <!-- Background-->
+    <header
+      class="flex justify-between items-center w-full px-container-padding h-16 bg-surface dark:bg-on-surface opacity-40"
+    >
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+        <span
+          class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed"
+          >SakuKu</span
+        >
+      </div>
+      <span class="material-symbols-outlined text-primary">notifications</span>
+    </header>
+    <main class="px-container-padding pt-6 opacity-40">
+      <div
+        class="bg-white rounded-xl p-5 shadow-[0_4px_12px_rgba(0,0,0,0.05)] mb-6"
+      >
+        <p class="text-label-md font-label-md text-on-surface-variant mb-1">
+          Total Saldo
+        </p>
+        <h1 class="text-headline-lg font-headline-lg text-on-surface">
+          Rp 12.450.000
+        </h1>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl p-4 flex justify-between items-center">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-primary"
+                >shopping_bag</span
+              >
+            </div>
+            <div>
+              <p class="font-semibold">Belanja Bulanan</p>
+              <p class="text-xs text-on-surface-variant">24 Mei 2024</p>
+            </div>
+          </div>
+          <p class="font-bold text-error">- Rp 450.000</p>
+        </div>
+      </div>
+    </main>
+    <!-- Bottom Navigation (Obscured) -->
+    <nav
+      class="fixed bottom-0 w-full z-10 flex justify-around items-center h-16 px-4 bg-surface dark:bg-on-surface border-t border-outline-variant/10 opacity-40"
+    >
+      <div
+        class="flex flex-col items-center justify-center text-primary font-bold"
+      >
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-label-md font-label-md">Beranda</span>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-on-surface-variant"
+      >
+        <span class="material-symbols-outlined">history</span>
+        <span class="text-label-md font-label-md">Riwayat</span>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-on-surface-variant"
+      >
+        <span class="material-symbols-outlined">leaderboard</span>
+        <span class="text-label-md font-label-md">Analitik</span>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center text-on-surface-variant"
+      >
+        <span class="material-symbols-outlined">settings</span>
+        <span class="text-label-md font-label-md">Pengaturan</span>
+      </div>
+    </nav>
+    <!-- Overlay Back-drop -->
+    <div class="fixed inset-0 bg-on-surface/40 backdrop-blur-[2px] z-20"></div>
+    <!-- Bottom Sheet Modal -->
+    <div
+      id="bottomSheet"
+      class="fixed bottom-0 left-0 right-0 z-30 bg-surface-container-lowest rounded-t-[32px] shadow-2xl flex flex-col max-h-[92vh] bottom-sheet"
+    >
+      <!-- Handle Bar -->
+      <div class="w-full flex justify-center pt-3 pb-2">
+        <div class="w-10 h-1.5 bg-outline-variant rounded-full"></div>
+      </div>
+      <!-- Header -->
+      <div class="px-container-padding flex justify-between items-center mb-6">
+        <h2 class="text-headline-md font-headline-md text-on-surface">
+          Tambah Transaksi
+        </h2>
+        <button
+          class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors"
+        >
+          <span
+            class="material-symbols-outlined text-on-surface-variant text-[20px]"
+            >close</span
+          >
+        </button>
+      </div>
+      <div
+        class="px-container-padding overflow-y-auto custom-scrollbar pb-safe"
+      >
+        <!-- Toggle Switch -->
+        <div class="bg-surface-container-low rounded-full p-1.5 flex mb-8">
+          <button
+            id="toggleExpense"
+            class="flex-1 py-2.5 rounded-full text-body-md font-semibold transition-all duration-300 bg-error text-white shadow-sm"
+          >
+            Pengeluaran
+          </button>
+          <button
+            id="toggleIncome"
+            class="flex-1 py-2.5 rounded-full text-body-md font-semibold transition-all duration-300 text-on-surface-variant"
+          >
+            Pemasukan
+          </button>
+        </div>
+        <!-- Amount Input -->
+        <div class="flex flex-col items-center mb-8">
+          <div class="flex items-baseline gap-2">
+            <span class="text-headline-md text-on-surface-variant font-bold"
+              >Rp</span
+            >
+            <input
+              type="number"
+              id="amountInput"
+              placeholder="0"
+              class="w-full text-center bg-transparent border-none p-0 text-display-numeric font-display-numeric text-on-surface focus:ring-0 placeholder:text-outline-variant"
+              autofocus=""
+            />
+          </div>
+          <div class="w-32 h-1 bg-primary/10 rounded-full mt-2"></div>
+        </div>
+        <!-- Category Selector -->
+        <div class="mb-6">
+          <label
+            class="text-label-md font-label-md text-on-surface-variant uppercase mb-3 block px-1"
+            >Kategori</label
+          >
+          <div class="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
+            <button
+              class="category-chip flex-shrink-0 flex flex-col items-center gap-2 group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center transition-all group-active:scale-95 group-[.active]:bg-primary group-[.active]:text-on-primary"
+              >
+                <span class="material-symbols-outlined">restaurant</span>
+              </div>
+              <span
+                class="text-label-md font-label-md text-on-surface-variant group-[.active]:text-primary"
+                >Makanan</span
+              >
+            </button>
+            <button
+              class="category-chip flex-shrink-0 flex flex-col items-center gap-2 group active"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center transition-all group-active:scale-95 group-[.active]:bg-primary group-[.active]:text-on-primary"
+              >
+                <span class="material-symbols-outlined">commute</span>
+              </div>
+              <span
+                class="text-label-md font-label-md text-on-surface-variant group-[.active]:text-primary"
+                >Transportasi</span
+              >
+            </button>
+            <button
+              class="category-chip flex-shrink-0 flex flex-col items-center gap-2 group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center transition-all group-active:scale-95 group-[.active]:bg-primary group-[.active]:text-on-primary"
+              >
+                <span class="material-symbols-outlined">payments</span>
+              </div>
+              <span
+                class="text-label-md font-label-md text-on-surface-variant group-[.active]:text-primary"
+                >Gaji</span
+              >
+            </button>
+            <button
+              class="category-chip flex-shrink-0 flex flex-col items-center gap-2 group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center transition-all group-active:scale-95 group-[.active]:bg-primary group-[.active]:text-on-primary"
+              >
+                <span class="material-symbols-outlined">shopping_cart</span>
+              </div>
+              <span
+                class="text-label-md font-label-md text-on-surface-variant group-[.active]:text-primary"
+                >Belanja</span
+              >
+            </button>
+            <button
+              class="category-chip flex-shrink-0 flex flex-col items-center gap-2 group"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center transition-all group-active:scale-95 group-[.active]:bg-primary group-[.active]:text-on-primary"
+              >
+                <span class="material-symbols-outlined">receipt_long</span>
+              </div>
+              <span
+                class="text-label-md font-label-md text-on-surface-variant group-[.active]:text-primary"
+                >Tagihan</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Additional Fields -->
+        <div class="space-y-4 mb-8">
+          <div
+            class="bg-surface-container-low rounded-2xl p-4 flex items-center gap-4 transition-all focus-within:ring-2 focus-within:ring-primary/20"
+          >
+            <span class="material-symbols-outlined text-outline">event</span>
+            <div class="flex-1">
+              <p class="text-label-md text-outline leading-none mb-1">
+                Tanggal
+              </p>
+              <input
+                type="date"
+                value="2024-05-24"
+                class="w-full bg-transparent border-none p-0 text-body-md font-semibold text-on-surface focus:ring-0"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-surface-container-low rounded-2xl p-4 flex items-start gap-4 transition-all focus-within:ring-2 focus-within:ring-primary/20"
+          >
+            <span class="material-symbols-outlined text-outline mt-1"
+              >notes</span
+            >
+            <div class="flex-1">
+              <p class="text-label-md text-outline leading-none mb-1">
+                Keterangan
+              </p>
+              <textarea
+                rows="2"
+                placeholder="Tulis catatan di sini..."
+                class="w-full bg-transparent border-none p-0 text-body-md text-on-surface focus:ring-0 resize-none placeholder:text-outline-variant"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <!-- Submit Button -->
+        <div class="pb-8">
+          <button
+            class="w-full h-touch-target-min bg-primary text-on-primary rounded-2xl font-bold text-body-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform duration-200 active:scale-95"
+          >
+            <span class="material-symbols-outlined text-[20px]">save</span>
+            Simpan Transaksi
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const toggleExpense = document.getElementById("toggleExpense");
+      const toggleIncome = document.getElementById("toggleIncome");
+      const amountInput = document.getElementById("amountInput");
+      const categoryChips = document.querySelectorAll(".category-chip");
+
+      toggleExpense.addEventListener("click", () => {
+        toggleExpense.classList.add("bg-error", "text-white", "shadow-sm");
+        toggleExpense.classList.remove("text-on-surface-variant");
+        toggleIncome.classList.remove(
+          "bg-secondary",
+          "text-white",
+          "shadow-sm",
+        );
+        toggleIncome.classList.add("text-on-surface-variant");
+      });
+
+      toggleIncome.addEventListener("click", () => {
+        toggleIncome.classList.add("bg-secondary", "text-white", "shadow-sm");
+        toggleIncome.classList.remove("text-on-surface-variant");
+        toggleExpense.classList.remove("bg-error", "text-white", "shadow-sm");
+        toggleExpense.classList.add("text-on-surface-variant");
+      });
+
+      categoryChips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          categoryChips.forEach((c) => c.classList.remove("active"));
+          chip.classList.add("active");
+        });
+      });
+
+      // Basic animation for amount input
+      amountInput.addEventListener("input", (e) => {
+        const val = e.target.value;
+        if (val.length > 8) e.target.value = val.slice(0, 8);
+      });
+    </script>
+  </body>
+</html>

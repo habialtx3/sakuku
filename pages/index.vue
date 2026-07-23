@@ -165,27 +165,10 @@
 
     <!-- Bottom Navigation Component -->
     <BottomNavigation @open-add="openModal('expense')" />
-
-    <!-- Modal Component -->
-    <AddTransactionModal 
-      :is-open="isModalOpen" 
-      :initial-type="selectedType" 
-      @close="isModalOpen = false" 
-    />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-// Pastikan file AddTransactionModal.vue memang ada di dalam folder components/
-import AddTransactionModal from '~/components/AddTransactionModal.vue'
+// Hapus import AddTransactionModal, state isModalOpen, dll.
 import BottomNavigation from '~/components/BottomNavigation.vue'
-
-const isModalOpen = ref(false)
-const selectedType = ref('expense')
-
-const openModal = (type = 'expense') => {
-  selectedType.value = type
-  isModalOpen.value = true
-}
 </script>
