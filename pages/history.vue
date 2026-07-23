@@ -164,13 +164,83 @@
                 </div>
             </section>
         </div>
+        <!-- Bottom Navigation Component -->
+        <BottomNavigation @open-add="openModal('expense')" />
+
+        <!-- Modal Component -->
+        <AddTransactionModal :is-open="isModalOpen" :initial-type="selectedType" @close="isModalOpen = false" />
     </main>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { ref, watch } from 'vue'
 
-onMounted(() => {
-  // Objek 'document' aman dipanggil di sini karena sudah berjalan di browser (client-side)
-});
+const props = defineProps({
+    isOpen: {
+        type: Boolean,
+        default: false
+    },
+    initialType: {
+        type: String,
+        default: 'expense'
+    }
+})
+
+const emit = defineEmits(['close', 'save'])
+
+// Reactive Form States
+const transactionType = ref(props.initialType)
+const amount = ref('')
+const selectedCategory = ref('transport')
+const transactionDate = ref(new Date().toISOString().split('T')[0])
+const notes = ref('')
+
+// List Kategori Interaktif
+const categories = [
+    { id: 'food', name: 'Makanan', icon: 'restaurant' },
+    { id: 'transport', name: 'Transportasi', icon: 'commute' },
+    { id: 'salary', name: 'Gaji', icon: 'payments' },
+    { id: 'shopping', name: 'Belanja', icon: 'shopping_cart' },
+    { id: 'bills', name: 'Tagihan', icon: 'receipt_long' }
+]
+
+// Sinkronkan tipe pengeluaran/pemasukan jika diubah dari luar modal
+watch(() => props.initialType, (newVal) => {
+    transactionType.value = newVal
+})
+
+// Fungsi Simpan Transaksi
+const handleSave = () => {
+    const data = {
+        type: transactionType.value,
+        amount: amount.value,
+        category: selectedCategory.value,
+        date: transactionDate.value,
+        notes: notes.value
+    }
+
+    console.log('Data Transaksi:', data)
+    emit('save', data)
+    emit('close')
+
+    // Reset form setelah simpan
+    amount.value = ''
+    notes.value = ''
+}
 </script>
+
+<style scoped>
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+</style>
